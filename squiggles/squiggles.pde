@@ -10,7 +10,7 @@ PFont small_font, big_font;
 int book_counter = 0;
 
 void setup() {
-  size(800, 800);
+  size(3000, 3000);
   big_font = createFont("Arimo Bold", width / 12);
   small_font = createFont("Arimo Bold", width / 20);
 }
@@ -47,12 +47,12 @@ void draw() {
       textAlign(CENTER);
       text("G U T  F L O R A", 0, height * 4 / 9, width, height);
       textFont(small_font);
-      text("GOODE BYE", 0, height * 5 / 9, width, height);
+      text("G O O D E   B Y E", 0, height * 5 / 9, width, height);
       
 //      PImage qrcode = loadImage("../qr_codes/images/" + book_counter + ".png");
 //      image(qrcode, width / 2, height * 2 / 3, width / 4, height / 4); 
     }
-    save("squiggle_" + filename + "_" + numCounter + ".png");
+    save("images/" + filename + "_" + numCounter + ".png");
   }
   
   if (filename == 100) {
@@ -64,13 +64,7 @@ void draw() {
 }
 
 void mousePressed() {
-  if (playing) {
-    noLoop();
-    playing = false;
-  } else {
-    playing = true;
-    loop();
-  }
+  
 }
 
 void makeShape(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int thickness) {
